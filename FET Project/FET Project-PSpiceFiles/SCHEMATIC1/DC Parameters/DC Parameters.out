@@ -1,0 +1,145 @@
+
+**** 12/06/14 11:14:14 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC Parameters"  [ C:\Users\Calvin\Desktop\Electronics and Circuits\Electronics\Project 3\fet\FET Project\fet
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "DC Parameters.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Calvin\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source FET PROJECT
+X_Q1         N11810 0 N09521 N09521 awbvn2222 PARAMS:                          
++                      
+C_C1         N09521 N11203 1 TC=0
+V_Vin         N09235 0  AC 1
++SIN 0 1mV 1kHz 0 0 0
+R_Rs         N09235 N11203  0.1k TC=0,0 
+R_RL         0 N11174  5674 TC=0,0 
+R_RD         N11810 N09466  1000 TC=0,0 
+R_RSS         N09543 N09521  2000 TC=0,0 
+C_C2         N11174 N11810 1 TC=0
+V_V1         0 N09543 10Vdc
+V_V2         0 N09466 -10Vdc
+
+**** RESUMING "DC Parameters.cir" ****
+.END
+
+**** 12/06/14 11:14:14 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC Parameters"  [ C:\Users\Calvin\Desktop\Electronics and Circuits\Electronics\Project 3\fet\FET Project\fet
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_Q1.model14    
+               NMOS            
+       LEVEL    2            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    2.6          
+          KP     .12         
+       GAMMA    0            
+         PHI     .7          
+      LAMBDA    1.000000E-03 
+          RS    1            
+          IS   10.000000E-15 
+          JS    0            
+          PB    1            
+        PBSW    1            
+         CBD  100.000000E-12 
+          CJ    0            
+        CJSW    0            
+        CGSO    5.500000E-06 
+        CGDO  500.000000E-09 
+        CGBO    0            
+         TOX  100.000000E-09 
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 12/06/14 11:14:14 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC Parameters"  [ C:\Users\Calvin\Desktop\Electronics and Circuits\Electronics\Project 3\fet\FET Project\fet
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N09235)    0.0000 (N09466)   10.0000 (N09521)   -2.8466 (N09543)  -10.0000     
+
+(N11174)    0.0000 (N11203)    0.0000 (N11810)    6.4233 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vin        0.000E+00
+    V_V1        -3.577E-03
+    V_V2         3.577E-03
+
+    TOTAL POWER DISSIPATION   7.15E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 12/06/14 11:14:14 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC Parameters"  [ C:\Users\Calvin\Desktop\Electronics and Circuits\Electronics\Project 3\fet\FET Project\fet
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

@@ -1,0 +1,285 @@
+
+**** 12/05/14 17:36:39 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Simulated Gain over Temperature"  [ C:\Users\Calvin\Desktop\fet\FET Project\fet project-pspicefiles\schemati
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Simulated Gain over Temperature.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Calvin\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 3m 0 
+.TEMP -40,25,85
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source FET PROJECT
+X_Q1         N11810 0 N09521 N09521 awbvn2222 PARAMS:                          
++                      
+C_C1         N09521 N11203 1 TC=0
+V_Vin         N09235 0  AC 1
++SIN 0 1mV 1kHz 0 0 0
+R_Rs         N09235 N11203  0.1k TC=0,0 
+R_RL         0 N11174  5674 TC=0,0 
+R_RD         N11810 N09466  1000 TC=0,0 
+R_RSS         N09543 N09521  2000 TC=0,0 
+C_C2         N11174 N11810 1 TC=0
+V_V1         0 N09543 10Vdc
+V_V2         0 N09466 -10Vdc
+
+**** RESUMING "Simulated Gain over Temperature.cir" ****
+.END
+
+**** 12/05/14 17:36:39 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Simulated Gain over Temperature"  [ C:\Users\Calvin\Desktop\fet\FET Project\fet project-pspicefiles\schemati
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_Q1.model14    
+               NMOS            
+       LEVEL    2            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    2.6          
+          KP     .12         
+       GAMMA    0            
+         PHI     .7          
+      LAMBDA    1.000000E-03 
+          RS    1            
+          IS   10.000000E-15 
+          JS    0            
+          PB    1            
+        PBSW    1            
+         CBD  100.000000E-12 
+          CJ    0            
+        CJSW    0            
+        CGSO    5.500000E-06 
+        CGDO  500.000000E-09 
+        CGBO    0            
+         TOX  100.000000E-09 
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 12/05/14 17:36:39 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Simulated Gain over Temperature"  [ C:\Users\Calvin\Desktop\fet\FET Project\fet project-pspicefiles\schemati
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =  -40.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                X_Q1.model14  
+
+        VTO        2.654E+00  
+        PHI        8.243E-01  
+         PB        1.057E+00  
+     IS(JS)        1.835E-20  
+         KP        1.753E-01  
+         UO        8.764E+02  
+
+
+**** 12/05/14 17:36:39 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Simulated Gain over Temperature"  [ C:\Users\Calvin\Desktop\fet\FET Project\fet project-pspicefiles\schemati
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =  -40.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N09235)    0.0000 (N09466)   10.0000 (N09521)   -2.8584 (N09543)  -10.0000     
+
+(N11174)    0.0000 (N11203)    0.0000 (N11810)    6.4292 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vin        0.000E+00
+    V_V1        -3.571E-03
+    V_V2         3.571E-03
+
+    TOTAL POWER DISSIPATION   7.14E-02  WATTS
+
+
+**** 12/05/14 17:36:39 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Simulated Gain over Temperature"  [ C:\Users\Calvin\Desktop\fet\FET Project\fet project-pspicefiles\schemati
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   25.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                X_Q1.model14  
+
+        VTO        2.602E+00  
+        PHI        7.038E-01  
+         PB        1.002E+00  
+     IS(JS)        7.335E-15  
+         KP        1.212E-01  
+         UO        6.060E+02  
+
+
+**** 12/05/14 17:36:39 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Simulated Gain over Temperature"  [ C:\Users\Calvin\Desktop\fet\FET Project\fet project-pspicefiles\schemati
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   25.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N09235)    0.0000 (N09466)   10.0000 (N09521)   -2.8470 (N09543)  -10.0000     
+
+(N11174)    0.0000 (N11203)    0.0000 (N11810)    6.4235 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vin        0.000E+00
+    V_V1        -3.576E-03
+    V_V2         3.576E-03
+
+    TOTAL POWER DISSIPATION   7.15E-02  WATTS
+
+
+**** 12/05/14 17:36:39 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Simulated Gain over Temperature"  [ C:\Users\Calvin\Desktop\fet\FET Project\fet project-pspicefiles\schemati
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   85.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                X_Q1.model14  
+
+        VTO        2.552E+00  
+        PHI        5.869E-01  
+         PB        9.449E-01  
+     IS(JS)        1.838E-11  
+         KP        9.206E-02  
+         UO        4.603E+02  
+
+
+**** 12/05/14 17:36:39 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Simulated Gain over Temperature"  [ C:\Users\Calvin\Desktop\fet\FET Project\fet project-pspicefiles\schemati
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   85.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N09235)    0.0000 (N09466)   10.0000 (N09521)   -2.8330 (N09543)  -10.0000     
+
+(N11174)    0.0000 (N11203)    0.0000 (N11810)    6.4165 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vin        0.000E+00
+    V_V1        -3.583E-03
+    V_V2         3.583E-03
+
+    TOTAL POWER DISSIPATION   7.17E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 12/05/14 17:36:39 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Simulated Gain over Temperature"  [ C:\Users\Calvin\Desktop\fet\FET Project\fet project-pspicefiles\schemati
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

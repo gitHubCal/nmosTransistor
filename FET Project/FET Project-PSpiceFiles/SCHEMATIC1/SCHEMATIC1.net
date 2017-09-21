@@ -1,0 +1,13 @@
+* source FET PROJECT
+X_Q1         N11810 0 N09521 N09521 awbvn2222 PARAMS:                          
++                      
+C_C1         N09521 N11203 1 TC=0
+V_Vin         N09235 0  AC 1
++SIN 0 1mV 1kHz 0 0 0
+R_Rs         N09235 N11203  0.1k TC=0,0 
+R_RL         0 N11174  5674 TC=0,0 
+R_RD         N11810 N09466  1000 TC=0,0 
+R_RSS         N09543 N09521  2000 TC=0,0 
+C_C2         N11174 N11810 1 TC=0
+V_V1         0 N09543 10Vdc
+V_V2         0 N09466 -10Vdc
